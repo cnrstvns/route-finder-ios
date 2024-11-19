@@ -8,17 +8,53 @@
 
 /* Begin PBXBuildFile section */
 		B35847002CDF2BA3007A7C8B /* RouteFinderApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B35846FF2CDF2BA3007A7C8B /* RouteFinderApp.swift */; };
-		B35847022CDF2BA3007A7C8B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B35847012CDF2BA3007A7C8B /* ContentView.swift */; };
 		B35847042CDF2BA4007A7C8B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B35847032CDF2BA4007A7C8B /* Assets.xcassets */; };
 		B35847072CDF2BA4007A7C8B /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B35847062CDF2BA4007A7C8B /* Preview Assets.xcassets */; };
+		B3DF5F3C2CEBE55D00DFB880 /* AuthenticationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3DF5F3B2CEBE55D00DFB880 /* AuthenticationManager.swift */; };
+		B3DF5F3E2CEBE5A700DFB880 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3DF5F3D2CEBE5A700DFB880 /* LoginView.swift */; };
+		B3DF5F472CEC020B00DFB880 /* AuthSessionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3DF5F462CEC020B00DFB880 /* AuthSessionViewModel.swift */; };
+		B3DF5F492CEC022D00DFB880 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3DF5F482CEC022D00DFB880 /* HomeView.swift */; };
+		B3DF5F4F2CECC13000DFB880 /* BaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3DF5F4E2CECC13000DFB880 /* BaseService.swift */; };
+		B3DF5F512CECC16000DFB880 /* SessionService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3DF5F502CECC16000DFB880 /* SessionService.swift */; };
+		B3DF5F532CECC1F700DFB880 /* AircraftService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3DF5F522CECC1F700DFB880 /* AircraftService.swift */; };
+		B3DF5F562CECC2C900DFB880 /* AircraftView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3DF5F552CECC2C900DFB880 /* AircraftView.swift */; };
+		B3DF5F5A2CECDA4C00DFB880 /* AirlineView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3DF5F592CECDA4C00DFB880 /* AirlineView.swift */; };
+		B3DF5F5C2CECDAA800DFB880 /* AirlineService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3DF5F5B2CECDAA800DFB880 /* AirlineService.swift */; };
+		B3DF5F5E2CECE10B00DFB880 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3DF5F5D2CECE10B00DFB880 /* SettingsView.swift */; };
+		B3DF5F612CECE64A00DFB880 /* AppearanceSettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3DF5F602CECE64A00DFB880 /* AppearanceSettingsView.swift */; };
+		B3DF5F632CECE8B300DFB880 /* AccountSettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3DF5F622CECE8B300DFB880 /* AccountSettingsView.swift */; };
+		B3DF5F652CECF5AB00DFB880 /* PaginationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3DF5F642CECF5AB00DFB880 /* PaginationView.swift */; };
+		B3DF5F672CED01BD00DFB880 /* AirportView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3DF5F662CED01BD00DFB880 /* AirportView.swift */; };
+		B3DF5F692CED020300DFB880 /* FavoritesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3DF5F682CED020300DFB880 /* FavoritesView.swift */; };
+		B3DF5F6B2CED07B400DFB880 /* AirportService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3DF5F6A2CED07B400DFB880 /* AirportService.swift */; };
+		B3DF5F6D2CED0BCC00DFB880 /* AirportDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3DF5F6C2CED0BCC00DFB880 /* AirportDetailView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		B35846FC2CDF2BA3007A7C8B /* RouteFinder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RouteFinder.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B35846FF2CDF2BA3007A7C8B /* RouteFinderApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouteFinderApp.swift; sourceTree = "<group>"; };
-		B35847012CDF2BA3007A7C8B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		B35847032CDF2BA4007A7C8B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B35847062CDF2BA4007A7C8B /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		B3DF5F3B2CEBE55D00DFB880 /* AuthenticationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationManager.swift; sourceTree = "<group>"; };
+		B3DF5F3D2CEBE5A700DFB880 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		B3DF5F412CEBE74800DFB880 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		B3DF5F422CEBED8400DFB880 /* RouteFinder.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = RouteFinder.entitlements; sourceTree = "<group>"; };
+		B3DF5F462CEC020B00DFB880 /* AuthSessionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthSessionViewModel.swift; sourceTree = "<group>"; };
+		B3DF5F482CEC022D00DFB880 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		B3DF5F4E2CECC13000DFB880 /* BaseService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseService.swift; sourceTree = "<group>"; };
+		B3DF5F502CECC16000DFB880 /* SessionService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionService.swift; sourceTree = "<group>"; };
+		B3DF5F522CECC1F700DFB880 /* AircraftService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AircraftService.swift; sourceTree = "<group>"; };
+		B3DF5F552CECC2C900DFB880 /* AircraftView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AircraftView.swift; sourceTree = "<group>"; };
+		B3DF5F592CECDA4C00DFB880 /* AirlineView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AirlineView.swift; sourceTree = "<group>"; };
+		B3DF5F5B2CECDAA800DFB880 /* AirlineService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AirlineService.swift; sourceTree = "<group>"; };
+		B3DF5F5D2CECE10B00DFB880 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		B3DF5F602CECE64A00DFB880 /* AppearanceSettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppearanceSettingsView.swift; sourceTree = "<group>"; };
+		B3DF5F622CECE8B300DFB880 /* AccountSettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountSettingsView.swift; sourceTree = "<group>"; };
+		B3DF5F642CECF5AB00DFB880 /* PaginationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaginationView.swift; sourceTree = "<group>"; };
+		B3DF5F662CED01BD00DFB880 /* AirportView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AirportView.swift; sourceTree = "<group>"; };
+		B3DF5F682CED020300DFB880 /* FavoritesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesView.swift; sourceTree = "<group>"; };
+		B3DF5F6A2CED07B400DFB880 /* AirportService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AirportService.swift; sourceTree = "<group>"; };
+		B3DF5F6C2CED0BCC00DFB880 /* AirportDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AirportDetailView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,8 +87,14 @@
 		B35846FE2CDF2BA3007A7C8B /* RouteFinder */ = {
 			isa = PBXGroup;
 			children = (
+				B3DF5F542CECC2BF00DFB880 /* Pages */,
+				B3DF5F432CEC014E00DFB880 /* API */,
 				B35846FF2CDF2BA3007A7C8B /* RouteFinderApp.swift */,
-				B35847012CDF2BA3007A7C8B /* ContentView.swift */,
+				B3DF5F3B2CEBE55D00DFB880 /* AuthenticationManager.swift */,
+				B3DF5F462CEC020B00DFB880 /* AuthSessionViewModel.swift */,
+				B3DF5F642CECF5AB00DFB880 /* PaginationView.swift */,
+				B3DF5F422CEBED8400DFB880 /* RouteFinder.entitlements */,
+				B3DF5F412CEBE74800DFB880 /* Info.plist */,
 				B35847032CDF2BA4007A7C8B /* Assets.xcassets */,
 				B35847052CDF2BA4007A7C8B /* Preview Content */,
 			);
@@ -65,6 +107,43 @@
 				B35847062CDF2BA4007A7C8B /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		B3DF5F432CEC014E00DFB880 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				B3DF5F4E2CECC13000DFB880 /* BaseService.swift */,
+				B3DF5F502CECC16000DFB880 /* SessionService.swift */,
+				B3DF5F522CECC1F700DFB880 /* AircraftService.swift */,
+				B3DF5F5B2CECDAA800DFB880 /* AirlineService.swift */,
+				B3DF5F6A2CED07B400DFB880 /* AirportService.swift */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		B3DF5F542CECC2BF00DFB880 /* Pages */ = {
+			isa = PBXGroup;
+			children = (
+				B3DF5F5F2CECE62D00DFB880 /* Settings */,
+				B3DF5F482CEC022D00DFB880 /* HomeView.swift */,
+				B3DF5F3D2CEBE5A700DFB880 /* LoginView.swift */,
+				B3DF5F552CECC2C900DFB880 /* AircraftView.swift */,
+				B3DF5F592CECDA4C00DFB880 /* AirlineView.swift */,
+				B3DF5F662CED01BD00DFB880 /* AirportView.swift */,
+				B3DF5F682CED020300DFB880 /* FavoritesView.swift */,
+				B3DF5F6C2CED0BCC00DFB880 /* AirportDetailView.swift */,
+			);
+			path = Pages;
+			sourceTree = "<group>";
+		};
+		B3DF5F5F2CECE62D00DFB880 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				B3DF5F5D2CECE10B00DFB880 /* SettingsView.swift */,
+				B3DF5F602CECE64A00DFB880 /* AppearanceSettingsView.swift */,
+				B3DF5F622CECE8B300DFB880 /* AccountSettingsView.swift */,
+			);
+			path = Settings;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -83,6 +162,8 @@
 			dependencies = (
 			);
 			name = RouteFinder;
+			packageProductDependencies = (
+			);
 			productName = RouteFinder;
 			productReference = B35846FC2CDF2BA3007A7C8B /* RouteFinder.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +192,8 @@
 				Base,
 			);
 			mainGroup = B35846F32CDF2BA3007A7C8B;
+			packageReferences = (
+			);
 			productRefGroup = B35846FD2CDF2BA3007A7C8B /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -137,8 +220,25 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B35847022CDF2BA3007A7C8B /* ContentView.swift in Sources */,
+				B3DF5F472CEC020B00DFB880 /* AuthSessionViewModel.swift in Sources */,
 				B35847002CDF2BA3007A7C8B /* RouteFinderApp.swift in Sources */,
+				B3DF5F3C2CEBE55D00DFB880 /* AuthenticationManager.swift in Sources */,
+				B3DF5F652CECF5AB00DFB880 /* PaginationView.swift in Sources */,
+				B3DF5F6D2CED0BCC00DFB880 /* AirportDetailView.swift in Sources */,
+				B3DF5F3E2CEBE5A700DFB880 /* LoginView.swift in Sources */,
+				B3DF5F512CECC16000DFB880 /* SessionService.swift in Sources */,
+				B3DF5F492CEC022D00DFB880 /* HomeView.swift in Sources */,
+				B3DF5F692CED020300DFB880 /* FavoritesView.swift in Sources */,
+				B3DF5F672CED01BD00DFB880 /* AirportView.swift in Sources */,
+				B3DF5F5E2CECE10B00DFB880 /* SettingsView.swift in Sources */,
+				B3DF5F5A2CECDA4C00DFB880 /* AirlineView.swift in Sources */,
+				B3DF5F562CECC2C900DFB880 /* AircraftView.swift in Sources */,
+				B3DF5F532CECC1F700DFB880 /* AircraftService.swift in Sources */,
+				B3DF5F4F2CECC13000DFB880 /* BaseService.swift in Sources */,
+				B3DF5F632CECE8B300DFB880 /* AccountSettingsView.swift in Sources */,
+				B3DF5F5C2CECDAA800DFB880 /* AirlineService.swift in Sources */,
+				B3DF5F612CECE64A00DFB880 /* AppearanceSettingsView.swift in Sources */,
+				B3DF5F6B2CED07B400DFB880 /* AirportService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -269,16 +369,19 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = RouteFinder/RouteFinder.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"RouteFinder/Preview Content\"";
+				DEVELOPMENT_TEAM = 9TY3U535XZ;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = RouteFinder/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -297,16 +400,19 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = RouteFinder/RouteFinder.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"RouteFinder/Preview Content\"";
+				DEVELOPMENT_TEAM = 9TY3U535XZ;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = RouteFinder/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
