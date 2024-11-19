@@ -61,7 +61,6 @@ class AircraftViewModel: PaginatedViewModel {
         aircraftService.listAircraft(page: page, limit: limit) { [weak self] result in
             DispatchQueue.main.async {
                 self?.isLoading = false
-                print("marked loading false")
                 
                 switch result {
                 case .success(let aircraft):

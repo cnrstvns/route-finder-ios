@@ -95,13 +95,6 @@ class BaseService {
                 return
             }
 
-            // Print raw JSON for debugging
-            if let rawJSON = String(data: data, encoding: .utf8) {
-                print("Raw JSON from API: \(rawJSON)")
-            } else {
-                print("Unable to convert data to string.")
-            }
-
             do {
                 let decoder = JSONDecoder()
                 decoder.dateDecodingStrategy = .custom { decoder -> Date in

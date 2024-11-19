@@ -22,11 +22,9 @@ class AuthSessionViewModel: ObservableObject {
         authService.retrieveSession { [weak self] result in
             DispatchQueue.main.async {
                 self?.isLoading = false
-                print(result)
                 switch result {
                 case .success(let session):
                     self?.authSession = session
-                    print(session)
                 case .failure(let error):
                     self?.errorMessage = error.localizedDescription
                 }
