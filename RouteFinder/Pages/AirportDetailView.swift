@@ -13,7 +13,6 @@ struct AirportDetailView: View {
     var body: some View {
         ScrollView {
             VStack(alignment: .leading, spacing: 16) {
-                // Title
                 Text(airport.name)
                     .font(.largeTitle)
                     .bold()

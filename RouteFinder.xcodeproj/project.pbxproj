@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B3056A9F2CF0100400152CE3 /* NewRouteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3056A9E2CF0100400152CE3 /* NewRouteView.swift */; };
+		B3056AA22CF0139300152CE3 /* ChooseAirlineView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3056AA12CF0139300152CE3 /* ChooseAirlineView.swift */; };
+		B3056AA42CF01BB000152CE3 /* RouteCriteriaView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3056AA32CF01BB000152CE3 /* RouteCriteriaView.swift */; };
+		B33EEF572CEE768300CC02B0 /* FavoritesDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B33EEF562CEE768300CC02B0 /* FavoritesDetailView.swift */; };
 		B35847002CDF2BA3007A7C8B /* RouteFinderApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B35846FF2CDF2BA3007A7C8B /* RouteFinderApp.swift */; };
 		B35847042CDF2BA4007A7C8B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B35847032CDF2BA4007A7C8B /* Assets.xcassets */; };
 		B35847072CDF2BA4007A7C8B /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B35847062CDF2BA4007A7C8B /* Preview Assets.xcassets */; };
@@ -28,9 +32,15 @@
 		B3DF5F692CED020300DFB880 /* FavoritesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3DF5F682CED020300DFB880 /* FavoritesView.swift */; };
 		B3DF5F6B2CED07B400DFB880 /* AirportService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3DF5F6A2CED07B400DFB880 /* AirportService.swift */; };
 		B3DF5F6D2CED0BCC00DFB880 /* AirportDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3DF5F6C2CED0BCC00DFB880 /* AirportDetailView.swift */; };
+		B3DF5F702CED50E600DFB880 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = B3DF5F6F2CED50E600DFB880 /* Kingfisher */; };
+		B3DF5F722CED5B3A00DFB880 /* UserRouteService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3DF5F712CED5B3A00DFB880 /* UserRouteService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B3056A9E2CF0100400152CE3 /* NewRouteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewRouteView.swift; sourceTree = "<group>"; };
+		B3056AA12CF0139300152CE3 /* ChooseAirlineView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChooseAirlineView.swift; sourceTree = "<group>"; };
+		B3056AA32CF01BB000152CE3 /* RouteCriteriaView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouteCriteriaView.swift; sourceTree = "<group>"; };
+		B33EEF562CEE768300CC02B0 /* FavoritesDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesDetailView.swift; sourceTree = "<group>"; };
 		B35846FC2CDF2BA3007A7C8B /* RouteFinder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RouteFinder.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B35846FF2CDF2BA3007A7C8B /* RouteFinderApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouteFinderApp.swift; sourceTree = "<group>"; };
 		B35847032CDF2BA4007A7C8B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -55,6 +65,7 @@
 		B3DF5F682CED020300DFB880 /* FavoritesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesView.swift; sourceTree = "<group>"; };
 		B3DF5F6A2CED07B400DFB880 /* AirportService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AirportService.swift; sourceTree = "<group>"; };
 		B3DF5F6C2CED0BCC00DFB880 /* AirportDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AirportDetailView.swift; sourceTree = "<group>"; };
+		B3DF5F712CED5B3A00DFB880 /* UserRouteService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRouteService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,12 +73,23 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B3DF5F702CED50E600DFB880 /* Kingfisher in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B3056AA02CF0137F00152CE3 /* NewRoute */ = {
+			isa = PBXGroup;
+			children = (
+				B3056A9E2CF0100400152CE3 /* NewRouteView.swift */,
+				B3056AA12CF0139300152CE3 /* ChooseAirlineView.swift */,
+				B3056AA32CF01BB000152CE3 /* RouteCriteriaView.swift */,
+			);
+			path = NewRoute;
+			sourceTree = "<group>";
+		};
 		B35846F32CDF2BA3007A7C8B = {
 			isa = PBXGroup;
 			children = (
@@ -117,6 +139,7 @@
 				B3DF5F522CECC1F700DFB880 /* AircraftService.swift */,
 				B3DF5F5B2CECDAA800DFB880 /* AirlineService.swift */,
 				B3DF5F6A2CED07B400DFB880 /* AirportService.swift */,
+				B3DF5F712CED5B3A00DFB880 /* UserRouteService.swift */,
 			);
 			path = API;
 			sourceTree = "<group>";
@@ -124,6 +147,7 @@
 		B3DF5F542CECC2BF00DFB880 /* Pages */ = {
 			isa = PBXGroup;
 			children = (
+				B3056AA02CF0137F00152CE3 /* NewRoute */,
 				B3DF5F5F2CECE62D00DFB880 /* Settings */,
 				B3DF5F482CEC022D00DFB880 /* HomeView.swift */,
 				B3DF5F3D2CEBE5A700DFB880 /* LoginView.swift */,
@@ -132,6 +156,7 @@
 				B3DF5F662CED01BD00DFB880 /* AirportView.swift */,
 				B3DF5F682CED020300DFB880 /* FavoritesView.swift */,
 				B3DF5F6C2CED0BCC00DFB880 /* AirportDetailView.swift */,
+				B33EEF562CEE768300CC02B0 /* FavoritesDetailView.swift */,
 			);
 			path = Pages;
 			sourceTree = "<group>";
@@ -163,6 +188,7 @@
 			);
 			name = RouteFinder;
 			packageProductDependencies = (
+				B3DF5F6F2CED50E600DFB880 /* Kingfisher */,
 			);
 			productName = RouteFinder;
 			productReference = B35846FC2CDF2BA3007A7C8B /* RouteFinder.app */;
@@ -193,6 +219,7 @@
 			);
 			mainGroup = B35846F32CDF2BA3007A7C8B;
 			packageReferences = (
+				B3DF5F6E2CED50E600DFB880 /* XCRemoteSwiftPackageReference "Kingfisher" */,
 			);
 			productRefGroup = B35846FD2CDF2BA3007A7C8B /* Products */;
 			projectDirPath = "";
@@ -220,6 +247,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B3DF5F722CED5B3A00DFB880 /* UserRouteService.swift in Sources */,
 				B3DF5F472CEC020B00DFB880 /* AuthSessionViewModel.swift in Sources */,
 				B35847002CDF2BA3007A7C8B /* RouteFinderApp.swift in Sources */,
 				B3DF5F3C2CEBE55D00DFB880 /* AuthenticationManager.swift in Sources */,
@@ -232,13 +260,17 @@
 				B3DF5F672CED01BD00DFB880 /* AirportView.swift in Sources */,
 				B3DF5F5E2CECE10B00DFB880 /* SettingsView.swift in Sources */,
 				B3DF5F5A2CECDA4C00DFB880 /* AirlineView.swift in Sources */,
+				B3056A9F2CF0100400152CE3 /* NewRouteView.swift in Sources */,
 				B3DF5F562CECC2C900DFB880 /* AircraftView.swift in Sources */,
 				B3DF5F532CECC1F700DFB880 /* AircraftService.swift in Sources */,
+				B3056AA22CF0139300152CE3 /* ChooseAirlineView.swift in Sources */,
 				B3DF5F4F2CECC13000DFB880 /* BaseService.swift in Sources */,
 				B3DF5F632CECE8B300DFB880 /* AccountSettingsView.swift in Sources */,
 				B3DF5F5C2CECDAA800DFB880 /* AirlineService.swift in Sources */,
 				B3DF5F612CECE64A00DFB880 /* AppearanceSettingsView.swift in Sources */,
 				B3DF5F6B2CED07B400DFB880 /* AirportService.swift in Sources */,
+				B33EEF572CEE768300CC02B0 /* FavoritesDetailView.swift in Sources */,
+				B3056AA42CF01BB000152CE3 /* RouteCriteriaView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -448,6 +480,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		B3DF5F6E2CED50E600DFB880 /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 8.1.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		B3DF5F6F2CED50E600DFB880 /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B3DF5F6E2CED50E600DFB880 /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = B35846F42CDF2BA3007A7C8B /* Project object */;
 }

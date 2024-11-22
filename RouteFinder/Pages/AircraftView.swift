@@ -15,15 +15,15 @@ struct AircraftView: View {
         NavigationStack {
             VStack {
                 PaginationView(viewModel: aircraftViewModel) { aircraft in
-                            VStack(alignment: .leading) {
-                                Text(aircraft.modelName)
-                                    .font(.headline)
-                                Text("IATA Code: \(aircraft.iataCode)")
-                                    .font(.subheadline)
-                                    .foregroundColor(.secondary)
-                            }
-                            .padding(.vertical, 4)
-                        }
+                    VStack(alignment: .leading) {
+                        Text(aircraft.modelName)
+                            .font(.headline)
+                        Text("IATA Code: \(aircraft.iataCode)")
+                            .font(.subheadline)
+                            .foregroundColor(.secondary)
+                    }
+                    .padding(.vertical, 4)
+                }
             }
             .navigationTitle("Aircraft")
         }.onAppear {

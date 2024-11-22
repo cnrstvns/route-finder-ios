@@ -13,11 +13,13 @@ import Security
 class AuthenticationManager: ObservableObject {
     @Published var isAuthenticated = false
     @Published var authError: String?
+    @Published var isCheckingAuthentication = true
+    
     private let baseURL = "https://routes-api.cnrstvns.dev"
     
     static let shared = AuthenticationManager()
     private var safariVC: SFSafariViewController?
-
+    
     
     // MARK: - OAuth Methods
     
@@ -34,7 +36,7 @@ class AuthenticationManager: ObservableObject {
         let redirectScheme = "routefinder" // You'll need to configure this in your Info.plist
         let redirectURL = "\(redirectScheme)://oauth-callback"
         let encodedRedirect = redirectURL.addingPercentEncoding(withAllowedCharacters: .urlHostAllowed) ?? ""
-                
+        
         let authURL = "\(baseURL)/auth/\(provider)/init?redirect=\(encodedRedirect)"
         
         if let url = URL(string: authURL) {
@@ -52,50 +54,50 @@ class AuthenticationManager: ObservableObject {
     }
     
     func handleCallback(_ url: URL) {
-            // First, dismiss the Safari View Controller
-            DispatchQueue.main.async { [weak self] in
-                self?.safariVC?.dismiss(animated: true) {
-                    self?.safariVC = nil
-                }
-                
-                if let windowScene = UIApplication.shared.connectedScenes.first as? UIWindowScene,
-                   let rootViewController = windowScene.windows.first?.rootViewController {
-                    rootViewController.dismiss(animated: true)
-                }
+        // First, dismiss the Safari View Controller
+        DispatchQueue.main.async { [weak self] in
+            self?.safariVC?.dismiss(animated: true) {
+                self?.safariVC = nil
             }
             
-            // Parse the URL fragment
-            let urlString = url.absoluteString
-            
-            if let token = extractToken(from: url) {
-                saveToken(token)
-            } else {
-                DispatchQueue.main.async {
-                    self.authError = "Failed to extract token from URL"
-                }
+            if let windowScene = UIApplication.shared.connectedScenes.first as? UIWindowScene,
+               let rootViewController = windowScene.windows.first?.rootViewController {
+                rootViewController.dismiss(animated: true)
             }
         }
+        
+        // Parse the URL fragment
+        let urlString = url.absoluteString
+        
+        if let token = extractToken(from: url) {
+            saveToken(token)
+        } else {
+            DispatchQueue.main.async {
+                self.authError = "Failed to extract token from URL"
+            }
+        }
+    }
     
     private func extractToken(from url: URL) -> String? {
-           // First try query parameters
-           if let components = URLComponents(url: url, resolvingAgainstBaseURL: false),
-              let queryItems = components.queryItems,
-              let token = queryItems.first(where: { $0.name == "token" })?.value {
-               return token
-           }
-           
-           // If no token in query params, try checking the fragment
-           if let fragment = url.fragment,
-              fragment.contains("token=") {
-               let parts = fragment.components(separatedBy: "=")
-               if parts.count > 1 {
-                   return parts[1]
-               }
-           }
-           
-           return nil
-       }
-       
+        // First try query parameters
+        if let components = URLComponents(url: url, resolvingAgainstBaseURL: false),
+           let queryItems = components.queryItems,
+           let token = queryItems.first(where: { $0.name == "token" })?.value {
+            return token
+        }
+        
+        // If no token in query params, try checking the fragment
+        if let fragment = url.fragment,
+           fragment.contains("token=") {
+            let parts = fragment.components(separatedBy: "=")
+            if parts.count > 1 {
+                return parts[1]
+            }
+        }
+        
+        return nil
+    }
+    
     
     // MARK: - Token Management
     
@@ -106,10 +108,10 @@ class AuthenticationManager: ObservableObject {
             kSecAttrService as String: "com.cnrstvns.RouteFinder",
             kSecAttrAccount as String: "AuthToken",
         ]
-                
+        
         SecItemDelete(query as CFDictionary)
         let status = SecItemAdd(query as CFDictionary, nil)
-                
+        
         if status == errSecSuccess {
             DispatchQueue.main.async {
                 self.isAuthenticated = true
@@ -158,5 +160,7 @@ class AuthenticationManager: ObservableObject {
                 self.isAuthenticated = false
             }
         }
+        
+        self.isCheckingAuthentication = false
     }
 }

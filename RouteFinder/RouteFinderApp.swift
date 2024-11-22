@@ -11,8 +11,8 @@ import UIKit
 // Allow the app to have a custom scene delegate
 class AppDelegate: NSObject, UIApplicationDelegate {
     func application(_ application: UIApplication,
-                    configurationForConnecting connectingSceneSession: UISceneSession,
-                    options: UIScene.ConnectionOptions) -> UISceneConfiguration {
+                     configurationForConnecting connectingSceneSession: UISceneSession,
+                     options: UIScene.ConnectionOptions) -> UISceneConfiguration {
         let configuration = UISceneConfiguration(name: nil, sessionRole: connectingSceneSession.role)
         configuration.delegateClass = SceneDelegate.self
         return configuration
@@ -31,15 +31,24 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 struct RouteFinderApp: App {
     @UIApplicationDelegateAdaptor(AppDelegate.self) private var appDelegate
     @StateObject private var authManager = AuthenticationManager.shared
-        
+    
     var body: some Scene {
         WindowGroup {
             Group {
-                if authManager.isAuthenticated {
+                if authManager.isCheckingAuthentication {
+                    NavigationStack {
+                        ProgressView()
+                    }
+                } else if authManager.isAuthenticated {
                     TabView {
                         Home().tabItem {
                             Image(systemName: "house.fill")
                             Text("Home")
+                        }
+                        
+                        NewRouteView().tabItem {
+                            Image(systemName: "magnifyingglass")
+                            Text("Find Routes")
                         }
                         
                         SettingsView().tabItem {
@@ -47,7 +56,6 @@ struct RouteFinderApp: App {
                             Text("Settings")
                         }
                     }
-                    
                 } else {
                     LoginView()
                 }

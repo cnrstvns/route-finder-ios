@@ -19,7 +19,6 @@ struct SettingsView: View {
                         .progressViewStyle(CircularProgressViewStyle())
                         .padding()
                 } else if let session = viewModel.authSession {
-                    // Profile Section
                     VStack(spacing: 16) {
                         if let profilePictureUrl = session.profilePictureUrl, let url = URL(string: profilePictureUrl) {
                             AsyncImage(url: url) { image in
@@ -30,7 +29,7 @@ struct SettingsView: View {
                                     .clipShape(Circle())
                             } placeholder: {
                                 Circle()
-                                    .fill(Color.gray.opacity(0.3)) // Light gray color
+                                    .fill(Color.gray.opacity(0.3))
                                     .frame(width: 100, height: 100)
                             }
                         }
@@ -69,7 +68,6 @@ struct SettingsView: View {
                     }
                     .listStyle(InsetGroupedListStyle())
                 } else if let error = viewModel.errorMessage {
-                    // Error Message
                     Text("Error: \(error)")
                         .foregroundColor(.red)
                         .padding()

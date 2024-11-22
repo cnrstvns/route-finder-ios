@@ -11,7 +11,7 @@ import SwiftUI
 struct PaginationView<ViewModel: PaginatedViewModel, Content: View>: View {
     @ObservedObject var viewModel: ViewModel
     let content: (ViewModel.Item) -> Content
-
+    
     var body: some View {
         NavigationStack {
             VStack {
@@ -35,16 +35,16 @@ struct PaginationView<ViewModel: PaginatedViewModel, Content: View>: View {
                             viewModel.previousPage()
                         }
                         .disabled(viewModel.isLoading || !viewModel.canGoBack)
-
+                        
                         Spacer()
-
+                        
                         Button("Next") {
                             viewModel.nextPage()
                         }
                         .disabled(viewModel.isLoading || !viewModel.canGoForward)
                     }
                     .padding()
-
+                    
                     Text("Page \(viewModel.page)")
                         .font(.headline)
                         .frame(maxWidth: .infinity) // Ensures it's centered within the ZStack
@@ -64,12 +64,12 @@ struct SkeletonRow: View {
             RoundedRectangle(cornerRadius: 10)
                 .fill(Color.gray.opacity(0.3))
                 .frame(width: 50, height: 50)
-
+            
             VStack(alignment: .leading, spacing: 8) {
                 RoundedRectangle(cornerRadius: 10)
                     .fill(Color.gray.opacity(0.3))
                     .frame(height: 20)
-
+                
                 RoundedRectangle(cornerRadius: 10)
                     .fill(Color.gray.opacity(0.3))
                     .frame(height: 14)

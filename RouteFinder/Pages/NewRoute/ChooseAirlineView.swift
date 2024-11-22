@@ -1,23 +1,26 @@
 //
-//  AirlineView.swift
+//  ChooseAirlineView.swift
 //  RouteFinder
 //
-//  Created by Connor Stevens on 11/19/24.
+//  Created by Connor Stevens on 11/21/24.
 //
 
-import Foundation
 import SwiftUI
-import Combine
 import Kingfisher
 
-struct AirlineView: View {
-    @StateObject private var airlineViewModel = AirlineViewModel()
+struct ChooseAirlineView: View {
+    @StateObject private var chooseAirlineViewModel = ChooseAirlineViewModel()
     @State private var isSearching = false
     @State private var searchText = ""
     @FocusState private var isSearchFocused: Bool
     
     var body: some View {
         NavigationStack {
+            Text("Choose an airline to get started")
+                .foregroundStyle(.gray)
+                .frame(maxWidth: .infinity, alignment: .leading)
+                .padding(.leading)
+            
             VStack {
                 if isSearching {
                     TextField("Search airlines...", text: $searchText)
@@ -31,35 +34,45 @@ struct AirlineView: View {
                         .padding(.horizontal)
                         .submitLabel(.done)
                         .onChange(of: searchText) { _, newValue in
-                            airlineViewModel.setQuery(query: newValue)
+                            chooseAirlineViewModel.setQuery(query: newValue)
                         }
                         .focused($isSearchFocused)
      
                 }
                 
-                PaginationView(viewModel: airlineViewModel) { airline in
-                    HStack(spacing: 12) {
-                        VStack(alignment: .leading) {
-                            if let url = URL(string: airline.logoPath) {
-                                KFImage(url)
-                                    .placeholder {
-                                        ProgressView()
+                if chooseAirlineViewModel.isLoading {
+                    List(0..<10, id: \.self) { _ in
+                        SkeletonRow()
+                    }
+                } else {
+                    List {
+                        ForEach(chooseAirlineViewModel.items) { airline in
+                            NavigationLink(destination: RouteCriteriaView(airlineId: airline.id)) {
+                                HStack(spacing: 12) {
+                                    VStack(alignment: .leading) {
+                                        if let url = URL(string: airline.logoPath) {
+                                            KFImage(url)
+                                                .placeholder {
+                                                    ProgressView()
+                                                }
+                                                .resizable()
+                                                .scaledToFit()
+                                                .frame(width: 50, height: 50)
+                                                .clipShape(Circle())
+                                        }
                                     }
-                                    .resizable()
-                                    .scaledToFit()
-                                    .frame(width: 50, height: 50)
-                                    .clipShape(Circle())
+                                    
+                                    VStack(alignment: .leading) {
+                                        Text("\(airline.name)")
+                                            .font(.headline)
+                                        Text("\(airline.routeCount ?? 0) route\((airline.routeCount ?? 0) == 1 ? "" : "s")")
+                                            .font(.subheadline)
+                                            .foregroundColor(.secondary)
+                                    }
+                                    .padding(.vertical, 4)
+                                }
                             }
                         }
-                        
-                        VStack(alignment: .leading) {
-                            Text("\(airline.name)")
-                                .font(.headline)
-                            Text("IATA Code: \(airline.iataCode)")
-                                .font(.subheadline)
-                                .foregroundColor(.secondary)
-                        }
-                        .padding(.vertical, 4)
                     }
                 }
             }
@@ -70,8 +83,8 @@ struct AirlineView: View {
                         isSearching.toggle()
                         isSearchFocused.toggle()
                         
-                        if !airlineViewModel.query.isEmpty {
-                            airlineViewModel.setQuery(query: "")
+                        if !chooseAirlineViewModel.query.isEmpty {
+                            chooseAirlineViewModel.setQuery(query: "")
                             searchText = ""
                         }
                     }) {
@@ -81,13 +94,13 @@ struct AirlineView: View {
                 }
             }
             .onAppear {
-                airlineViewModel.loadItems()
+                chooseAirlineViewModel.loadItems()
             }
         }
     }
 }
 
-private class AirlineViewModel: PaginatedViewModel {
+private class ChooseAirlineViewModel: ObservableObject {
     var items: [Airline] = []
     
     typealias Item = Airline
@@ -96,7 +109,7 @@ private class AirlineViewModel: PaginatedViewModel {
     @Published var isLoading: Bool = false
     
     @Published var page: Int = 1
-    @Published var limit: Int = 10
+    @Published var limit: Int = 100
     @Published var hasMore: Bool = false
     @Published var totalCount: Int = 0
     
@@ -157,4 +170,8 @@ private class AirlineViewModel: PaginatedViewModel {
         page -= 1
         loadItems()
     }
+}
+
+#Preview {
+    ChooseAirlineView()
 }

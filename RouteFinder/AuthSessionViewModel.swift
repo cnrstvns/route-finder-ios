@@ -12,13 +12,13 @@ class AuthSessionViewModel: ObservableObject {
     @Published var authSession: AuthSession?
     @Published var errorMessage: String?
     @Published var isLoading: Bool = false
-
+    
     private let authService = SessionService()
-
+    
     func loadAuthSession() {
         isLoading = true
         errorMessage = nil
-
+        
         authService.retrieveSession { [weak self] result in
             DispatchQueue.main.async {
                 self?.isLoading = false

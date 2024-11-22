@@ -50,12 +50,12 @@ class AirportService: BaseService {
     }
     
     func retrieveAirport(
-           id: Int,
-           completion: @escaping (Result<Airport, Error>) -> Void
-       ) {
-           makeRequest(
-               endpoint: "/v1/airports/\(id)",
-               completion: completion
-           )
-       }
+        id: Int,
+        completion: @escaping (Result<Airport, Error>) -> Void
+    ) {
+        makeRequest(
+            endpoint: "/v1/airports/\(id)",
+            completion: completion
+        )
+    }
 }
