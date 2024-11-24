@@ -72,7 +72,7 @@ struct Home: View {
                 }
             }
             .navigationTitle("Home")
-            .listStyle(InsetGroupedListStyle())
+            .listStyle(.insetGrouped)
         }
     }
 }

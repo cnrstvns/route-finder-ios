@@ -51,9 +51,6 @@ struct PaginationView<ViewModel: PaginatedViewModel, Content: View>: View {
                         .multilineTextAlignment(.center)
                 }
             }
-            .onAppear {
-                viewModel.loadItems()
-            }
         }
     }
 }

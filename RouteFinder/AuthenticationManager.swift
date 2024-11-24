@@ -66,9 +66,6 @@ class AuthenticationManager: ObservableObject {
             }
         }
         
-        // Parse the URL fragment
-        let urlString = url.absoluteString
-        
         if let token = extractToken(from: url) {
             saveToken(token)
         } else {

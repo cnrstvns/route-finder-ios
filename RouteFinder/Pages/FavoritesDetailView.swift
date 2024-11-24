@@ -145,7 +145,6 @@ private class UserRouteDetailsViewModel: ObservableObject {
                 switch result {
                 case .success(let userRoute):
                     self?.userRoute = userRoute
-                    print(userRoute)
                 case .failure(let error):
                     self?.errorMessage = error.localizedDescription
                 }
