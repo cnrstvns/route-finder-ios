@@ -31,6 +31,10 @@ class AuthenticationManager: ObservableObject {
         initiateOAuth(provider: "discord")
     }
     
+    func initiateAppleAuth() {
+        initiateOAuth(provider: "apple")
+    }
+    
     private func initiateOAuth(provider: String) {
         // Construct the OAuth URL with the redirect back to our app
         let redirectScheme = "routefinder" // You'll need to configure this in your Info.plist

@@ -9,7 +9,8 @@ import SwiftUI
 
 struct LoginView: View {
     @EnvironmentObject var authManager: AuthenticationManager
-    
+    @Environment(\.colorScheme) var colorScheme
+
     var body: some View {
         VStack(spacing: 20) {
             Spacer()
@@ -47,6 +48,21 @@ struct LoginView: View {
                 .padding()
                 .background(Color.indigo)
                 .foregroundColor(.white)
+                .cornerRadius(10)
+            }
+            
+            Button(action: {
+                authManager.initiateAppleAuth()
+            }) {
+                HStack {
+                    Image(systemName: "apple.logo")
+                    Text("Sign in with Apple")
+                        .fontWeight(.medium)
+                }
+                .frame(maxWidth: .infinity)
+                .padding()
+                .background(Color.primary)
+                .foregroundColor(colorScheme == .dark ? .black : .white)
                 .cornerRadius(10)
             }
             

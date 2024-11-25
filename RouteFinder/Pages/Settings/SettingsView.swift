@@ -34,13 +34,18 @@ struct SettingsView: View {
                             }
                         }
 
-                        Text(session.firstName ?? "Aviator")
-                            .font(.title2)
-                            .bold()
+                        VStack {
+                            if let fullName = (session.firstName != nil) && (session.lastName != nil) ? "\(session.firstName ?? "") \(session.lastName ?? "")" : "Aviator" {
+                                Text(fullName)
+                                    .font(.title2)
+                                    .bold()
+                            }
 
-                        Text(session.emailAddress)
-                            .font(.subheadline)
-                            .foregroundColor(.secondary)
+                            Text(session.emailAddress)
+                                .font(.subheadline)
+                                .foregroundColor(.secondary)
+                        }
+                        
                     }
                     .padding()
 
