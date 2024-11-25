@@ -58,6 +58,7 @@ struct RouteFinderApp: App {
                     }
                 } else {
                     LoginView()
+                        .environmentObject(authManager)
                 }
             }.onAppear {
                 authManager.checkAuthentication()
